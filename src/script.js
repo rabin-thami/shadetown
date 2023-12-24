@@ -1,11 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const headerMenuElement = document.querySelector(".header__menu");
+// top menu
 
-    headerMenuElement.addEventListener("click", () => {
-        let menuItemElement = document.querySelector(".menu__item");
+const menuElement = document.querySelector(".fa-bars")
 
-        if (menuItemElement) {
-            menuItemElement.classList.toggle("hidden");
-        }
-    });
-});
+menuElement.addEventListener("click", () => {
+    let menuItem = document.querySelector(".menu__item")
+
+    if(menuItem && menuItem.classList.contains("hidden")){
+        menuItem.classList.remove("hidden")
+    } else {
+        menuItem.classList.add("hidden")
+    }
+
+})
